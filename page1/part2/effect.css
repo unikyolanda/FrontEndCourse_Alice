@@ -1,0 +1,58 @@
+html,
+/*消除瀏覽器的預設邊距*/
+body {
+	margin: 0px;
+}
+/* 網頁字體大小、4種字體優先順序＆顏色*/
+body {
+	font-size: 16px;
+	font-family: "Noto Sans TC", "華康黑體","微軟正黑體", arial, sans-serif;
+	color: #3f3a3a;
+}
+
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none; /* 移除所有狀態下的底線 */
+    color: inherit; /* 使用父元素的文字顏色 */
+}
+
+/*所有p的字母間距*/
+p{
+    letter-spacing: 3px;
+}
+
+/*normal*/
+@keyframes arrowUpDownMove{
+    0%   {   top: 545px; }
+    25%   {  top: 550px; }
+    50%   {  top: 555px; }
+    75%   {  top: 550px; }
+    100%   { top: 545px; }
+}
+/*Chrome和Safari*/
+@-webkit-keyframes arrowUpDownMove{
+    0%   {   top: 545px; }
+    25%   {  top: 550px; }
+    50%   {  top: 555px; }
+    75%   {  top: 550px; }
+    100%   { top: 545px; }
+}
+/*Mozilla Firefox*/
+@-moz-keyframes arrowUpDownMove{
+    0%   {   top: 545px; }
+    25%   {  top: 550px; }
+    50%   {  top: 555px; }
+    75%   {  top: 550px; }
+    100%   { top: 545px; }
+}
+/*Opera*/
+@-o-keyframes arrowUpDownMove{
+    0%   {   top: 545px; }
+    25%   {  top: 550px; }
+    50%   {  top: 555px; }
+    75%   {  top: 550px; }
+    100%   { top: 545px; }
+}
