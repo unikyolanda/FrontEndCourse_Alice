@@ -11,8 +11,62 @@ header{
     background-color: rgb(250, 250, 250); 
     background: linear-gradient(white,white); 
     align-items: center;
-
 }
+
+
+header>nav>div:hover{
+    color: rgb(26, 216, 211);
+}
+
+header>nav>div>a:hover{
+    color: rgb(26, 216, 211);
+    cursor: pointer;
+}
+
+header>div{
+    margin-left: 60px;
+}
+
+header>div.logo{
+    width: 134.3px;
+    height: 65px;
+}
+
+header>.logo>a>img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.6s;
+}
+
+header>.logo>a>img:hover{
+    transform: scale(1.2);
+}
+
+header>nav{
+    margin-right: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 40%;
+    align-items: center;
+}
+
+header>nav>div{
+    line-height: 97px;
+    color: rgb(128, 128, 128);
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+header>nav>div>img{
+    width: 18px;
+    transition: all 0.6s;
+}
+
+header>nav>div>img:hover{
+    transform: scale(1.4);
+}
+
 
 .logo img {
     width: auto;
@@ -40,8 +94,9 @@ section{
     background-size: cover;
     height: 580px;
     padding:10px;
-    background-position: center;
-    margin-top: 200px;
+    background-position-x: center;
+    background-position-y: center;
+    margin-top: 105px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,8 +395,52 @@ main>div.partner>div>p{
     letter-spacing: 0px;
 }
 
+/* 測驗Go */
 
+aside#myAside{
+    z-index: 2;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 20%;
+    right: 0;
+    width: 78px;
+    height: 69px;
+    -webkit-transition: bottom 4s; /* For Safari 3.1 to 6.0 */
+    transition: bottom 4s;
+}
 
+aside#myAside:hover{
+    bottom: 25%;
+}
+
+aside#myAside>img{
+    width: 100%;
+    height: 100%;
+}
+
+/*top*/
+
+aside#top{
+    z-index: 2;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 1%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 36px;
+    height: 46px;
+    -webkit-transition: bottom 4s; 
+    transition: bottom 4s;
+}
+
+aside#top:hover{
+    bottom: 3%;
+}
+
+aside#top>img{
+    width: 100%;
+    height: 100%;
+}
 
 /* Footer styles */
 footer{
@@ -360,4 +459,32 @@ footer>p{
     font-size: 13px;
     line-height: 60px;  
     padding: 0 30px;
+}
+
+footer>p.p::before{
+    content:"Mail";
+    word-spacing: 20px;
+    color:rgb(26, 216, 211);
+}
+
+footer>p.e::before{
+    content:"Phone";
+    word-spacing: 20px;
+    color:rgb(26, 216, 211);
+}
+
+footer>div{
+    text-align: center;
+    line-height: 80px;
+    padding: 0 30px;
+}
+
+footer>div>img.footer-img{
+    height: 30px;
+    width: 30px;
+    vertical-align : middle;  
+}
+
+u{
+    text-decoration: none;
 }
