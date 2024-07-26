@@ -479,7 +479,7 @@ footer>div{
     padding: 0 30px;
 }
 
-footer>div>img.footer-img{
+footer>div>a>img.footer-img{
     height: 30px;
     width: 30px;
     vertical-align : middle;  
