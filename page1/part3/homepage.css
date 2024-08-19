@@ -338,6 +338,140 @@ main>div.partner{
 
 }
 
+/* 搜尋 */
+
+div.fullSearchDiv{
+    z-index: 3;
+    opacity: 0.7;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 87%;
+    background-color: black;
+    -webkit-transition: bottom 4s; 
+    transition: bottom 4s;
+}
+
+div.fullSearchWhiteDiv{
+    z-index: 3;
+    opacity: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 50%;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-transition: bottom 4s; 
+    transition: bottom 4s;
+}
+
+div.fullSearchWhiteDiv>div.whiteDivLeft{
+    width: 100%;
+    height: 86%;
+    background-color: rgb(243, 243, 243);
+    padding: 30px 0px;
+    border-radius: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.fullSearchWhiteDiv>div.whiteDivRight{
+    width: 10%;
+    height: 86%;
+    background-color: rgb(75, 67, 67);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 14;
+    padding: 30px 0px;
+    cursor: pointer;
+}
+
+div.fullSearchWhiteDiv>div.whiteDivLeft>div.whiteDivLeftIcon{
+    margin: 0 auto;
+    background: url(../images/FE_search_green.png);
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    width: 54px;
+    height: 58px;
+    margin-bottom: -24px;
+}
+
+div.fullSearchWhiteDiv>div.whiteDivLeft>p.whiteDivLeftText{
+    text-align: center;
+    color: rgb(26, 216, 211);
+    font-size: 18px;
+}
+
+div.fullSearchWhiteDiv>div.whiteDivLeft>form.whiteDivLeftBox{
+    display: flex;
+    width: 60%;
+    height: 35px;
+    background-color: white;
+    margin-left: 0%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+div.fullSearchWhiteDiv>div.whiteDivLeft>form.whiteDivLeftBox>input.leftInput{
+    width: 90%;
+    line-height: 2;
+    background-color: white;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 2;
+    border: 0px solid white;
+}
+
+div.fullSearchWhiteDiv>div.whiteDivLeft>form.whiteDivLeftBox>div.voiceButton{
+    background: url(./img/microphone.svg);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    width: 25px;
+    height: 28px;
+    margin: 0 auto;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+div.fullSearchWhiteDiv>div.whiteDivLeft>form.whiteDivLeftBox>div.leftButton{
+    background: url(./img/FE_search_green.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    width: 25px;
+    height: 28px;
+    margin: 0 auto;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+div.fullSearchWhiteDiv>div.CloseButton{
+    background: url(./img/close.png);
+    position: fixed;
+    top: 100px;
+    right: 100px;
+    border: none;
+    font-size: 100px;
+    color: rgb(211, 22, 22);
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+div.fullSearchWhiteDiv>div.whiteDivLeft>form.whiteDivLeftBox>div.CloseButton:hover {
+    background-color: #ddd;
+    color: red;
+  }
 /*關於*/
 
 main>div.third-picture{
