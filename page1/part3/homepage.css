@@ -361,7 +361,7 @@ div.fullSearchWhiteDiv{
     position: fixed;
     display: flex;
     flex-direction: row;
-    top: 20%;
+    top: 25%;
     left: 20%;
     width: 60%;
     height: 50%;
@@ -372,6 +372,7 @@ div.fullSearchWhiteDiv{
 }
 
 div.fullSearchWhiteDiv>div.whiteDivLeft{
+    position: relative;
     width: 100%;
     height: 86%;
     background-color: rgb(243, 243, 243);
@@ -395,9 +396,24 @@ div.fullSearchWhiteDiv>div.whiteDivRight{
     cursor: pointer;
 }
 
+div.fullSearchWhiteDiv>div.whiteDivLeft>div.CloseButton{
+    background: url(./img/close.png);
+    background-size: cover;
+    position: absolute; 
+    top: 10px; 
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
 div.fullSearchWhiteDiv>div.whiteDivLeft>div.whiteDivLeftIcon{
     margin: 0 auto;
-    background: url(../images/FE_search_green.png);
+    background: url(./img/FE_search_green.png);
     background-repeat: no-repeat;
     background-size: 45px 45px;
     width: 54px;
@@ -453,20 +469,7 @@ div.fullSearchWhiteDiv>div.whiteDivLeft>form.whiteDivLeftBox>div.leftButton{
     cursor: pointer;
 }
 
-div.fullSearchWhiteDiv>div.CloseButton{
-    background: url(./img/close.png);
-    position: fixed;
-    top: 100px;
-    right: 100px;
-    border: none;
-    font-size: 100px;
-    color: rgb(211, 22, 22);
-    cursor: pointer;
-    border-radius: 50%;
-    padding: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  
-}
+
 
 div.fullSearchWhiteDiv>div.whiteDivLeft>form.whiteDivLeftBox>div.CloseButton:hover {
     background-color: #ddd;

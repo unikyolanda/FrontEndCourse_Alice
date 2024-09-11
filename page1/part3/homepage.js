@@ -62,6 +62,7 @@ function startSearch() {
     //>countClick==0
   }
 }
+
 //startSearch
 app.search.createSearchDiv = () => {
   let newElement = document.createElement("div");
@@ -70,6 +71,7 @@ app.search.createSearchDiv = () => {
   document.body.appendChild(newElement);
   newElement.onclick = startSearch;
 };
+
 //searchButton
 app.search.createSearchWhiteDiv = () => {
   let newElement = document.createElement("div");
@@ -77,6 +79,7 @@ app.search.createSearchWhiteDiv = () => {
   newElement.className = "fullSearchWhiteDiv";
   document.body.appendChild(newElement);
 };
+
 //searchToArticle
 app.search.createWhiteDivLeftBox = () => {
   let newElement = document.createElement("form");
@@ -85,6 +88,7 @@ app.search.createWhiteDivLeftBox = () => {
   newElement.onsubmit = "return searchToArticle()";
   document.getElementById("whiteDivLeft").appendChild(newElement);
 };
+
 //創建一個文本輸入框，並在用戶按下 Enter 鍵時根據輸入的值導航到新的頁面。
 app.search.createLeftInput = () => {
   let newElement = document.createElement("input");
@@ -103,6 +107,7 @@ app.search.createLeftInput = () => {
     }
   });
 };
+
 //語音識別
 app.search.createVoiceButton = () => {
   let newElement = document.createElement("div");
@@ -147,11 +152,10 @@ app.search.createVoiceButton = () => {
       };
       // 開始語音識別
       recognition.start();
-      // 隱藏語音按鈕
-      this.style.display = "none";
     }
   };
 };
+
 //當用戶點擊搜尋按鈕時
 app.search.createLeftButton = () => {
   let newElement = document.createElement("div");
@@ -167,11 +171,16 @@ app.search.createLeftButton = () => {
 app.search.createCloseButton = () => {
   let newElement = document.createElement("div");
   newElement.className = "CloseButton";
-  let container = document.querySelector("fullSearchWhiteDiv");
-  if (container) {
-    container.appendChild(newElement);
-    newElement.addEventListener("click", () => {
-      container.remove(); // 移除 fullSearchWhiteDiv 元素
-    });
-  }
+  document.getElementById("whiteDivLeft").appendChild(newElement);
+
+  newElement.addEventListener("click", () => {
+    if (countClick == 1) {
+      let child = document.getElementById("fullSearchDiv");
+      document.body.removeChild(child);
+      let anotherChild = document.getElementById("fullSearchWhiteDiv");
+      document.body.removeChild(anotherChild);
+      countClick--;
+      //>countClick==0
+    }
+  });
 };
