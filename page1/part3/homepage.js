@@ -20,10 +20,22 @@ window.onload = () => {
   });
 };
 
+//載入特效
+window.onload = function () {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+
+  // 隱藏載入器，顯示內容
+  setTimeout(() => {
+    loader.style.display = "none";
+    content.style.display = "block";
+  }, 1500);
+};
+
 //搜尋
 let countClick = 0;
-//未打開搜尋列
 
+//未打開搜尋列
 app.get("#Search").addEventListener("click", startSearch);
 
 function startSearch() {
