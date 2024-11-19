@@ -1,6 +1,7 @@
 //回到最上面
 //確保當所有的頁面資源（如圖片、CSS 文件等）都加載完成後，才會執行內部的代碼。
 window.onload = () => {
+  // 平滑捲動功能
   const topButton = document.getElementById("top");
 
   // 監聽點擊事件
@@ -18,10 +19,8 @@ window.onload = () => {
     };
     scrollToTop();
   });
-};
 
-//載入特效
-window.onload = function () {
+  // 載入特效
   const loader = document.getElementById("loader");
   const content = document.getElementById("content");
 
