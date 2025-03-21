@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mainElement.innerHTML = `
                 <article>
                     <p>${item.city}</p>
-                    <p>${item.rectangleUrl}</p>
+                    <img src="${item.rectangleUrl}" alt="圖片">
                     <p><strong>課程名稱：</strong>${item.name}</p>
                     <p>${item.city}</p>
                     <p><strong>類型：</strong>${item.classType}</p>
