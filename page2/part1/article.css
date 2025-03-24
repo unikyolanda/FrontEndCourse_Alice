@@ -1,0 +1,272 @@
+section{
+    position: relative;
+    background: url("./img/contact-key.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 380px;
+    background-position-x: center;
+    background-position-y: center;
+    margin-top: 105px;
+    cursor: text;
+    opacity: 1;
+  }
+
+  section>a>div{
+    max-width: 1940px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    top:0;left: 0;
+    background-size: cover;
+    height: 380px;
+    color: white;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: auto;
+}
+
+section.keyvisual0{
+    display: none;
+}
+
+section.keyvisual2{
+    display: none;
+}
+
+section>div.section-grey{
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section>a>div>span.keyvisualSpan{
+    font-size: 24px;
+    color: white;
+    background-color: rgba(128,128,128,0.7);
+    padding: 6px;
+    border-radius: 5px;
+    letter-spacing: 10px;
+    text-align: center;
+    padding-left: 23px;
+}
+
+/* 標籤條 */
+
+div.tag-box{
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255,255,255,0.6);
+  box-shadow: 0 0 15px rgba(199, 199, 199, 0.8);
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+div.tag-box>div{
+  color: rgb(128, 128, 128);
+  line-height: 70px;
+  cursor: pointer;
+}
+
+div.tag-box>div:hover{
+  opacity: 0.5;
+}
+
+mark.mark-tag{
+  display: flex;
+  flex-direction: row;
+  background-color: white;    
+  padding:0px 60px 0px 60px;
+  color: rgb(128,128,128);
+  justify-content: flex-end;
+  font-size: 16px;
+  margin-top: 60px;
+  text-decoration: underline;
+}
+
+mark.mark-tag:hover{
+  text-decoration: none;
+}
+
+mark.mark-tag>form{
+  padding: 15px 15px;
+  margin: 10px;
+  height: 40px;
+  width: 100px;
+}
+
+mark.mark-tag>form>select{
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  padding-left: 15px;
+  border: 1px solid rgba(0,0,0,.3);
+  color:rgba(0,0,0,.7);
+}
+
+mark.mark-tag>form>select:focus{
+  outline: white;
+  border: 1px solid rgba(0,0,0,.7);
+}
+
+mark.mark-tag>form>select>option{
+  cursor: pointer;
+}
+
+main{
+  display: flex;flex-direction: row;flex-wrap: wrap;justify-content:center; 
+  width: auto;height: auto;
+  padding:0px 60px 70px 60px;
+}
+
+main>article{
+  border: 1px solid rgb(26, 216, 211);
+  padding: 15px 15px;
+  margin: 10px;
+}
+
+main>article>a>p{
+  line-height: 24px;
+  letter-spacing: 0px;
+  padding: 0px 30px;
+  text-align: center;
+  width: 240px;
+}
+
+main>article>div>a>p{
+  line-height: 24px;
+  letter-spacing: 0px;
+  padding: 0px 5px;
+}
+
+main>article>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px 15px 0px;
+}
+
+main>article>div.collection-school{
+  display: block;
+  margin: 0px 0px 0px 90%;
+  width: 20px;
+  height: 20px;
+  background: url('./img/star-border.svg');
+  background-size: cover;
+  cursor: pointer;
+}
+
+main>article>div>div.location-img-born{
+  width: 17.14px;
+  height: 23.7px;
+  background: url('./img/location_icon_one.png');
+  background-size: cover;
+}
+
+main>article>div>a>p.article-location{
+  font-size: 16px;
+  text-align: center;
+  color: rgb(125, 125, 125);
+  line-height: 10px;
+}
+
+main>article>div.tag-line{
+  border-top:1px solid rgb(26, 216, 211); width: 220px;height: 20px; margin:0 auto;
+  margin-top: 40px;
+  display: none;
+}
+
+main>article>a>div.article-div{
+  width:200px ; 
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+main>article>a>div>img.article-img{
+  width:200px ; 
+  height: 200px;
+  transition: all 0.6s;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+main>article>a>div>img.article-img:hover{
+  transform: scale(1.2);
+}
+
+main>article>a>p.article-head{
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 0px;
+  color: rgb(26, 216, 211);
+  cursor: pointer;
+  width: 240px;
+  line-height: 38px;
+}
+
+main>article>a>p:hover{
+  opacity: 0.7;
+}
+
+div.read-more-out{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  margin: 5px 0px 50px 0px;
+}
+
+div.read-more-word{
+  color: rgb(26, 216, 211);
+  width: 120px;
+  text-align: right;
+  -webkit-transition: margin-right 1s; 
+  transition: margin-right 1s;
+}
+
+div.read-more-word:hover{
+  margin-right: 25px;
+  opacity: 0.5;
+}
+
+div.read-more-div{
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  background: url(../images/arrow-right-one.png);
+  background-size: cover;
+  margin-left: 5px;
+  margin-top: 4.5px;
+}
+
+
+@media ( max-width: 823px ){
+  main>article {
+      border: 0px solid rgb(26, 216, 211);
+  }
+  main>article>div.tag-line{
+      display: block;
+  }
+  main>article>div {
+      margin: 0px 0px 20px 0px;
+  }
+  main>article {
+      margin: 0px 10px 0px 10px;
+      padding: 10px 15px;
+  }
+}
+
