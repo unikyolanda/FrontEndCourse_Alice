@@ -1,5 +1,3 @@
-let storePhoto = [];
-let keyvisualIndex = 0;
 document.addEventListener("DOMContentLoaded", () => {
   fetch("./front-enter-export.json")
     .then((response) => {
@@ -40,21 +38,34 @@ function setupKeyvisual() {
 
 // 輪播圖片效果
 
-storePhoto.push(
-  "https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-1.jpg?alt=media&token=059f5677-409b-4fc1-a772-baf1dece5063"
-);
-storePhoto.push(
-  "https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-2.jpg?alt=media&token=f28dbea4-af0c-4743-a75a-426198fe409e"
-);
-storePhoto.push(
-  "https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-3.jpg?alt=media&token=8f7f8f02-5066-452a-863c-a4e715d2657a"
-);
+let storePhoto = [
+  "https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-1.jpg?alt=media&token=059f5677-409b-4fc1-a772-baf1dece5063",
+  "https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-2.jpg?alt=media&token=f28dbea4-af0c-4743-a75a-426198fe409e",
+  "https://firebasestorage.googleapis.com/v0/b/front-enter.appspot.com/o/images%2Frotate-img-3.jpg?alt=media&token=8f7f8f02-5066-452a-863c-a4e715d2657a",
+];
+
+let keyvisualIndex = 0;
+
+// ⚡ 在網頁載入完後，啟動輪播
+document.addEventListener("DOMContentLoaded", () => {
+  setupKeyvisual();
+});
+
+function setupKeyvisual() {
+  changeKeyvisual(); // 一開始就跑一次
+  setInterval(changeKeyvisual, 5000); // 每 5 秒切換一次
+}
+
 function changeKeyvisual() {
   const len = storePhoto.length;
+
   for (let i = 0; i < 3; i++) {
     const el = document.getElementById(`keyvisual${i}`);
+    if (!el) continue; // 安全檢查，防止找不到元素出錯
+
     el.style.backgroundImage = `url(${storePhoto[(keyvisualIndex + i) % len]})`;
-    el.className = "keyvisual" + (i === 0 ? " active" : "");
+    el.className = "keyvisual" + (i === 0 ? " active" : ""); // 只有第 0 個是 active
   }
+
   keyvisualIndex = (keyvisualIndex + 1) % len;
 }
