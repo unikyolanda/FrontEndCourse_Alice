@@ -17,13 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
       mainElement.innerHTML = `
                 <article>
                     <p>${item.city}</p>
-                    <img src="${item.rectangleUrl}" alt="圖片">
-                    <p><strong>課程名稱：</strong>${item.name}</p>
-                    <p>${item.city}</p>
-                    <p><strong>類型：</strong>${item.classType}</p>
-                    <p><strong>費用：</strong>${item.fee} 元</p>
-                    <p><strong>聯絡電話：</strong>${item.phone}</p>
-                    <p><strong>課程內容：</strong>${item.content}</p>
+                    <img src="${item.squareUrl}" alt="圖片">
+                    <p>${item.name}</p>
+                    <p>${item.preface}</p>
                 </article>
             `;
     })
